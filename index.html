@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammad Faiq — Bio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylev2.css">
+</head>
+<body>
+   <header class="site-header">
+    <nav class="top-nav">
+      <a href="index.html" class="nav-item">HOME</a>
+      <a href="skillsv2.html" class="nav-item">SKILLS</a>
+      <a href="experiencev2.html" class="nav-item">EXPERIENCE</a>
+      <a href="educationv2.html" class="nav-item">EDUCATION</a>
+	   <a href="aboutmev2.html" class="nav-item">ABOUT ME</a>
+	  <a href="gallery.html" class="nav-item">GALLERY</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">Welcome<br><span class="hero-sub">
+          <p class="hero-desc">
+		  <p style="text-align: justify;">
+           Hi , Welcome to my personal website. This small space is where I keep pieces of my world. The experiences that shaped me, the skills I’ve learned, and the growth that continues quietly in the background. It’s a reflection of where I’ve been, and where I’m slowly finding my way to.
+          </p>
+
+         <div class="hero-socials">
+            <div class="handle">@muhammadfaiq</div>
+            <div class="icons">
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <img src="profilev2.jpg" alt="Profile Picture" class="hero-photo">
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <h2>Take a look around</h2>
+      <p>Here, I document my growth, my work, and the things that continue to shape who I am becoming.</p>
+    </section>
+  </main>
+
+<footer class="site-footer">
+  <div id="liveClock" class="live-clock"></div>
+  &copy; 2025 Muhammad Faiq bin Rohaizan
+  </footer>
+  
+  <script>
+  function updateClock() {
+  const now = new Date();
+  
+  // Format options: Day, Date Month Year | Time
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true 
+  };
+  
+  const timeString = now.toLocaleString('en-US', options);
+  
+  // Update the HTML element
+  document.getElementById('liveClock').innerHTML = timeString;
+}
+
+// Update the clock every 1 second
+setInterval(updateClock, 1000);
+
+// Run it once immediately so it doesn't wait 1 second to show up
+updateClock();
+ </script>
+</body>
+</html>

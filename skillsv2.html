@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills — Muhammad Faiq</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylev2.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav">
+      <a href="index.html" class="nav-item">HOME</a>
+      <a href="skillsv2.html" class="nav-item" >SKILLS</a>
+      <a href="experiencev2.html" class="nav-item">EXPERIENCE</a>
+      <a href="educationv2.html" class="nav-item">EDUCATION</a>
+	  <a href="aboutmev2.html" class="nav-item">ABOUT ME</a>
+	  <a href="gallery.html" class="nav-item">GALLERY</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero small-hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">Skills</h1>
+          <p class="hero-desc small">Technical and soft skills relevant to records and information management.</p>
+        </div>
+        <div class="hero-right">
+          <img src="profile-Skills.jpg" alt="Profile — Skills" class="profile-img">
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <h2 class="section-title">Technical Skills</h2>
+      
+      <div class="skill-grid">
+      
+        <div class="skill-card">
+          <div class="skill-logo">
+            <img src="logo-cplusplus.png" alt="C++ Logo">
+          </div>
+          <span class="skill-name">C++</span>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-logo">
+            <img src="logo-html.png" alt="HTML Logo">
+          </div>
+          <span class="skill-name">HTML</span>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-logo">
+            <img src="logo-msoffice.png" alt="Microsoft Office Logo">
+          </div>
+          <span class="skill-name">Microsoft Office</span>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-logo">
+            <img src="logo-webdesign.png" alt="Web Design Logo">
+          </div>
+          <span class="skill-name">Web Design</span>
+        </div>
+        
+        
+        <div class="skill-card">
+          <div class="skill-logo">
+            <img src="logo-e-records.png" alt="Handling Electronic Records Logo">
+          </div>
+          <span class="skill-name">E-Records</span>
+        </div>
+        
+        
+        <div class="skill-card">
+          <div class="skill-logo">
+            <img src="logo-canva.png" alt="Canva Logo">
+          </div>
+          <span class="skill-name">Canva</span>
+        </div>
+        
+      </div>
+      <h2 class="section-title">Soft Skills</h2>
+      <ul class="simple-list">
+        <br>1. Problem-solving</li>
+        <br>2. Time management</li>
+        <br>3. Adaptability</li>
+        <br>4. Effective communication</li>
+      </ul>
+    </section>
+  </main>
+  
+  <script>
+  function updateClock() {
+  const now = new Date();
+  
+  // Format options: Day, Date Month Year | Time
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true 
+  };
+  
+  const timeString = now.toLocaleString('en-US', options);
+  
+  // Update the HTML element
+  document.getElementById('liveClock').innerHTML = timeString;
+}
+
+// Update the clock every 1 second
+setInterval(updateClock, 1000);
+
+// Run it once immediately so it doesn't wait 1 second to show up
+updateClock();
+
+ </script>
+
+  <footer class="site-footer">
+  <div id="liveClock" class="live-clock"></div>
+  &copy; 2025 Muhammad Faiq bin Rohaizan
+  </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammad Faiq — Bio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylev2.css">
+</head>
+<body>
+   <header class="site-header">
+    <nav class="top-nav">
+      <a href="index.html" class="nav-item">HOME</a>
+      <a href="skillsv2.html" class="nav-item">SKILLS</a>
+      <a href="experiencev2.html" class="nav-item">EXPERIENCE</a>
+      <a href="educationv2.html" class="nav-item">EDUCATION</a>
+	  <a href="aboutmev2.html" class="nav-item">ABOUT ME</a>
+	  <a href="gallery.html" class="nav-item">GALLERY</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">Muhammad Faiq<br><span class="hero-sub"></span></h1>
+          <p class="hero-desc">
+		  <p style="text-align: justify;">
+I’m Muhammad Faiq Bin Rohaizan, currently pursuing a Diploma in Information Management at UiTM Segamat , with an interest in records management and information systems. I am working towards developing the knowledge and skills needed to prepare for future professional opportunities in this field.          </p>
+
+         <div class="hero-socials">
+            <div class="handle">@muhammadfaiq</div>
+            <div class="icons">
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <img src="profile-about.jpg" alt="Profile Picture" class="hero-photo">
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <h2>Brief Introduction</h2>
+      <p style="text-align: justify; margin-bottom: 48px;">
+        Welcome to my profile! I enjoy a lifestyle built around movement, discipline, and simplicity. Whether it’s time spent training, exploring the outdoors, or working quietly on myself, each experience contributes to the way I grow and think. I believe progress doesn’t always need to be loud, and this space reflects the steady effort I put into becoming a better version of myself
+      </p>
+      
+      <h2 class="section-title">At a Glance</h2>
+      
+      <ul class="info-list">
+        <li><strong>Name:</strong> Muhammad Faiq Bin Rohaizan</li>
+		<li><strong>Date of Birth:</strong> February 18 , 2005 </li>
+		<li><strong>Adress:</strong>Bandar Saujana Utama , Sungai Buloh , Selangor</li>
+		<li><strong>Email:</strong> muhammadfaiq@gmail.com</li>
+		<li><strong>Hobby:</strong> Experiencing new things </li>
+        <li><strong>Current Role:</strong> Diploma in Information Management Student</li>
+        <li><strong>Institution:</strong> UiTM Johor, Segamat Campus</li>
+   </ul>
+      
+      <p style="margin-top: 24px;">
+      </p>
+    </section>
+  
+  <h2 class="section-title">Weekly Lifestyle & Training</h2>
+  <p style="margin-bottom: 20px;">I have to stay grounded. If I don’t, my mind drifts to places I’ve worked so hard to survive. Keeping it busy is the only way I make sure it doesn’t go looking for what still hurts. This is my workout routine:</p>
+  
+  <div class="table-container">
+    <table class="routine-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Focus / Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Monday</strong></td>
+          <td>Chest Day</td>
+        </tr>
+        <tr>
+          <td><strong>Tuesday</strong></td>
+          <td>Back Day</td>
+        </tr>
+        <tr>
+          <td><strong>Wednesday</strong></td>
+          <td>Shoulder + Arms</td>
+        </tr>
+        <tr>
+          <td><strong>Thursday</strong></td>
+          <td>Lower Body</td>
+        </tr>
+        <tr>
+          <td><strong>Friday</strong></td>
+          <td>Cardio / Active Recovery</td>
+        </tr>
+        <tr>
+          <td><strong>Saturday</strong></td>
+          <td>Rest Day</td>
+        </tr>
+        <tr>
+          <td><strong>Sunday</strong></td>
+          <td>Repeat Cycle / Planning</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+  </main>
+  
+  <script>
+  function updateClock() {
+  const now = new Date();
+  
+  // Format options: Day, Date Month Year | Time
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true 
+  };
+  
+  const timeString = now.toLocaleString('en-US', options);
+  
+  // Update the HTML element
+  document.getElementById('liveClock').innerHTML = timeString;
+}
+
+// Update the clock every 1 second
+setInterval(updateClock, 1000);
+
+// Run it once immediately so it doesn't wait 1 second to show up
+updateClock();
+</script>
+
+<footer class="site-footer">
+  <div id="liveClock" class="live-clock"></div>
+  &copy; 2025 Muhammad Faiq bin Rohaizan
+  </footer>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Experience — Muhammad Faiq</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylev2.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav">
+      <a href="index.html" class="nav-item">HOME</a>
+      <a href="skillsv2.html" class="nav-item">SKILLS</a>
+      <a href="experiencev2.html" class="nav-item active">EXPERIENCE</a>
+      <a href="educationv2.html" class="nav-item">EDUCATION</a>
+	  <a href="aboutmev2.html" class="nav-item">ABOUT ME</a>
+      <a href="gallery.html" class="nav-item">GALLERY</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">Experience</h1>
+          <p class="hero-desc small">Undertook a two-month internship at Hospital Al‑Sultan Abdullah (HASA), UiTM Puncak Alam, working under the Tun Abdul Razak Medical Library Department.</p>
+          <p class="hero-desc small">These are the snapshots from my internship.</p>
+
+          <p class="place" style="margin-top:14px;">
+            <strong>Location:</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hospital+Al-Sultan+Abdullah+UiTM+Puncak+Alam"
+               target="_blank" rel="noopener noreferrer">
+              Hospital Al‑Sultan Abdullah — UiTM Puncak Alam
+            </a>
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <img src="profile-podcast.jpg" alt="Profile" class="hero-photo">
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+    <h2 class="section-title">Map — Hospital Al‑Sultan Abdullah</h2>
+
+    <div class="map-responsive">
+        
+        <div class="map-responsive--responsive--large" aria-hidden="false">
+            <iframe
+            src="https://www.google.com/maps?q=Hospital+Al-Sultan+Abdullah+UiTM+Puncak+Alam&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map — Hospital Al‑Sultan Abdullah"
+            tabindex="0"></iframe>
+        </div>
+        
+    </div>
+    
+    <div class="map-actions" style="text-align:center; padding:0 20px; margin:8px auto 24px;">
+        <a class="btn-open-map" href="https://www.google.com/maps/search/?api=1&query=Hospital+Al-Sultan+Abdullah+UiTM+Puncak+Alam" target="_blank" rel="noopener noreferrer">
+            Open in Google Maps
+        </a>
+    </div>
+
+    <p class="place-note" style="max-width:var(--maxw);margin:0 auto 14px;padding:0 20px;color:var(--muted); text-align:center;">
+        
+    </p>
+</section>
+
+    <section class="content">
+
+      <div class="album-masonry" aria-label="Experience photo album">
+        <img src="experience1.jpg" alt="Experience 1">
+        <img src="experience2.jpg" alt="Experience 2">
+        <img src="experience3.jpg" alt="Experience 3">
+        <img src="experience4.jpg" alt="Experience 4">
+        <img src="experience5.jpg" alt="Experience 5">
+		<img src="experience20.jpg" alt="Experience 20">
+        <img src="experience6.jpg" alt="Experience 6">
+        <img src="experience7.jpg" alt="Experience 7">
+        <img src="experience8.jpg" alt="Experience 8">
+		<img src="experience19.jpg" alt="Experience 19">
+        <img src="experience9.jpg" alt="Experience 9">
+        <img src="experience10.jpg" alt="Experience 10">
+        <img src="experience11.jpg" alt="Experience 11">
+		<img src="experience12.jpg" alt="Experience 12">
+        <img src="experience13.jpg" alt="Experience 13">
+        <img src="experience18.jpg" alt="Experience 18">
+		<img src="experience15.jpg" alt="Experience 15">
+		<img src="experience16.jpg" alt="Experience 16">
+		<img src="experience17.jpg" alt="Experience 17">
+		<img src="experience14.jpg" alt="Experience 14">
+      </div>
+
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div id="liveClock" class="live-clock"></div>
+  &copy; 2025 Muhammad Faiq bin Rohaizan
+  </footer>
+
+  <script>
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeBtn = document.querySelector('.modal-close');
+    
+    function openModal(src) {
+      modal.style.display = 'flex';
+      modalImage.src = src;
+      modalImage.onclick = function(event) { event.stopPropagation(); }; 
+    }
+    
+    // Function to close the modal
+    window.closeModal = function() {
+      modal.style.display = 'none';
+    }
+
+    document.querySelectorAll('.album-masonry img').forEach(img => {
+      img.onclick = function(event) {
+        event.preventDefault(); 
+        openModal(this.src);
+      };
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' || event.key === 'Esc') {
+        closeModal();
+      }
+    });
+	function updateClock() {
+  const now = new Date();
+  
+  // Format options: Day, Date Month Year | Time
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true 
+  };
+  
+  const timeString = now.toLocaleString('en-US', options);
+  
+  // Update the HTML element
+  document.getElementById('liveClock').innerHTML = timeString;
+}
+
+// Update the clock every 1 second
+setInterval(updateClock, 1000);
+
+// Run it once immediately so it doesn't wait 1 second to show up
+updateClock();
+  </script>
+  <div id="imageModal" class="modal-overlay" onclick="closeModal()">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+</body>
+</html>
