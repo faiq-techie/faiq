@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Me — Muhammad Faiq</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylev2.css">
+  <style>
+    .music-btn {
+      background: #fff;
+      border: 1px solid #ddd;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-top: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .music-btn:hover {
+      background: #f0f0f0;
+      border-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav">
+      <a href="index.html" class="nav-item">HOME</a>
+      <a href="skillsv2.html" class="nav-item">SKILLS</a>
+      <a href="experiencev2.html" class="nav-item">EXPERIENCE</a>
+      <a href="educationv2.html" class="nav-item">EDUCATION</a>
+      <a href="aboutmev2.html" class="nav-item">ABOUT ME</a>
+      <a href="gallery.html" class="nav-item">GALLERY</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">A little of my world</h1>
+          <p class="hero-desc small">A collection of moment I'm thankful for - where love for living quietly exist.</p>
+          
+          <audio id="bgMusic" loop>
+            <source src="merry-christmas.mp4" type="audio/mp4">
+            Your browser does not support the audio element.
+          </audio>
+          <button id="musicToggle" class="music-btn">
+            <span id="musicIcon">🔈</span> Play Music
+          </button>
+        </div>
+        <div class="hero-right">
+          <img src="profile.jpg" alt="Personal Photo" class="hero-photo">
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="album-masonry" aria-label="About Me photo & video album">
+        <video controls width="100%">
+          <source src="aboutme01.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <img src="about1.jpg" alt="Hobby">
+        <video controls width="100%">
+          <source src="aboutme1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <img src="about2.jpg" alt="Hobby">
+        <video controls width="100%">
+          <source src="aboutme2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <img src="about3.jpg" alt="Fun moment">
+        <video controls width="100%">
+          <source src="aboutme3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <img src="about4.jpg" alt="Hobby">
+        <video controls width="100%">
+          <source src="aboutme4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <img src="about5.jpg" alt="Fun moment">
+        <img src="about6.jpg" alt="Hobby">
+        <img src="about7.jpg" alt="Fun moment">
+        <img src="about8.jpg" alt="Hobby">
+        <img src="about26.jpg" alt="Hobby">
+        <img src="about11.jpg" alt="Fun moment">
+        <img src="about25.jpg" alt="Hobby">
+        
+        <video controls width="100%">
+          <source src="aboutme6.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <img src="about9.jpg" alt="Fun moment">
+        <img src="about10.jpg" alt="Hobby">
+        <img src="about12.jpg" alt="Hobby">
+        <img src="about13.jpg" alt="Fun moment">
+        <img src="about24.jpg" alt="Hobby">
+        <img src="about14.jpg" alt="Hobby">
+        <img src="about15.jpg" alt="Fun moment">
+        <img src="about16.jpg" alt="Hobby">
+        <img src="about17.jpg" alt="Hobby">
+		<img src="about23.jpg" alt="Hobby">
+        <img src="about18.jpg" alt="Hobby">
+        
+        <video controls width="100%">
+          <source src="aboutme5.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <img src="about19.jpg" alt="Hobby">
+        <img src="about20.jpg" alt="Fun moment">
+        <img src="about21.jpg" alt="Hobby">
+        <img src="about22.jpg" alt="Hobby">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div id="liveClock" class="live-clock"></div>
+  &copy; 2025 Muhammad Faiq bin Rohaizan
+  </footer>
+
+  <script>
+    // --- Music Controls ---
+    const music = document.getElementById('bgMusic');
+    const musicBtn = document.getElementById('musicToggle');
+    
+    musicBtn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        musicBtn.innerHTML = '<span>🔊</span> Stop Music';
+      } else {
+        music.pause();
+        musicBtn.innerHTML = '<span>🔈</span> Play Music';
+      }
+    });
+
+    // --- Modal Logic ---
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    function openModal(src) {
+      modal.style.display = 'flex';
+      modalImage.src = src;
+      modalImage.onclick = function(event) { event.stopPropagation(); }; 
+    }
+    
+    window.closeModal = function() {
+      modal.style.display = 'none';
+    }
+
+    document.querySelectorAll('.album-masonry img').forEach(img => {
+      img.onclick = function(event) {
+        event.preventDefault();
+        openModal(this.src);
+      };
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' || event.key === 'Esc') {
+        closeModal();
+      }
+    });
+	function updateClock() {
+  const now = new Date();
+  
+  // Format options: Day, Date Month Year | Time
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true 
+  };
+  
+  const timeString = now.toLocaleString('en-US', options);
+  
+  // Update the HTML element
+  document.getElementById('liveClock').innerHTML = timeString;
+}
+
+// Update the clock every 1 second
+setInterval(updateClock, 1000);
+
+// Run it once immediately so it doesn't wait 1 second to show up
+updateClock();
+  </script>
+
+  <div id="imageModal" class="modal-overlay" onclick="closeModal()">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+</body>
+</html>
+
+
+
